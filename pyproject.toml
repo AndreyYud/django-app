@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "prod"
+version = "0.1.0"
+description = ""
+authors = ["Andrey Yudin <andr73@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "4.2.0"
+djangorestframework = "^3.15.1"
+django-debug-toolbar = "^4.3.0"
+django-filter = "^24.2"
+pillow = "^10.3.0"
+gunicorn = "^22.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
