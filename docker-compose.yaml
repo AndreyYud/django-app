@@ -7,6 +7,10 @@ services:
     command:
       - gunicorn
       - mysite.wsgi:application
+      - --workers
+      - "3"
+      - --timeout
+      - "100"
       - --bind
       - "0.0.0.0:8080"
     ports:
