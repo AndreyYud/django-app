@@ -8,9 +8,9 @@ services:
       - gunicorn
       - mysite.wsgi:application
       - --workers
-      - "3"
+      - $COMPOSE_WORKERS
       - --timeout
-      - "100"
+      - $COMPOSE_TIMEOUT
       - --bind
       - "0.0.0.0:8080"
     ports:
@@ -23,5 +23,6 @@ services:
         max-size: "200k"
     volumes:
       - ./mysite/database:/django-app/database
+      - ./mysite/uploads:/django-app/uploads
     env_file:
       - .env

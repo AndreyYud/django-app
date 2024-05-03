@@ -168,6 +168,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
+MEDIA_ROOT.mkdir(exist_ok=True)
 # DEFAULT_FILE_STORAGE =
 
 # Default primary key field type
